@@ -8,14 +8,15 @@ package baldur.sorting.example.algs;
  * algorithm
  *
  */
-public final class InsertionSort {
-	
+public final class InsertionSort extends ExecutableSort{
+
+
 	/**
 	 * Method that implements the insertion sort algorithm
 	 * 
 	 * @param arr <code>int []</code> to be sorted
 	 */
-	public static void insertionSort(int[] arr) {
+	protected void insertionSort(){
 
 		for (int i = 0; i < arr.length; i++) {
 			int key = arr[i];
@@ -27,6 +28,21 @@ public final class InsertionSort {
 			arr[j + 1] = key;
 		}
 
+	}
+
+	@Override
+	protected Long sort() {
+		// Capture start time			
+		long startTime = System.currentTimeMillis();
+		insertionSort();
+		// Capture execution time			
+		long executionTime = System.currentTimeMillis();
+		return executionTime - startTime;
+	}
+
+	@Override
+	public String algType() {		
+		return "Insertion Sort";
 	}
 	
 }

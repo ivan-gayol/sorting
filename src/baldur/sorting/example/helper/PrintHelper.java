@@ -3,6 +3,8 @@
  */
 package baldur.sorting.example.helper;
 
+import baldur.sorting.example.algs.ExecutableSort;
+
 /**
  * Helper class for console messages
  *
@@ -27,10 +29,10 @@ public final class PrintHelper {
 	}
 	
 	/**
-	 * @param i
+	 * @param <T>
 	 */
-	public static void PrintLenghtTimeMessage(int length, long elapsedTime) {
-		System.out.println("--  Ordering array of length:  " + length + " Took: " + elapsedTime + "ms");
+	public static <T extends ExecutableSort> void PrintLenghtTimeMessage(T alg) {
+		System.out.println("--  Ordering array of length:  " + alg.arrayLength() + " Took: " + alg.execute() + "ms");
 	}
 
 }
