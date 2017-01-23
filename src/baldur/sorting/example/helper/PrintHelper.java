@@ -3,6 +3,8 @@
  */
 package baldur.sorting.example.helper;
 
+import java.util.List;
+
 import baldur.sorting.example.algs.ExecutableSort;
 
 /**
@@ -31,8 +33,14 @@ public final class PrintHelper {
 	/**
 	 * @param <T>
 	 */
-	public static <T extends ExecutableSort> void PrintLenghtTimeMessage(T alg) {
-		System.out.println("--  Ordering array of length:  " + alg.arrayLength() + " Took: " + alg.execute() + "ms");
+	public static <T extends ExecutableSort> void PrintLenghtTimeMessage(List<T> algList) {
+		if (!algList.isEmpty()){
+			System.out.print("--  Ordering array of length:  " + algList.get(0).arrayLength());
+			for (ExecutableSort alg : algList) {
+				System.out.print("-- " + alg.algType() + " Took: " + alg.execute() + "ms ");
+			}
+			System.out.println();
+		}
 	}
 
 }

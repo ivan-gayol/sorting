@@ -5,7 +5,14 @@ package baldur.sorting.example.algs;
 
 /**
  * Implementation class of the insertion sort
- * algorithm
+ * algorithm:
+ * 
+ * - Very effective on small lists (even quicker than quicksort)
+ * - Stable
+ * - Memory O(1)
+ * - Best n
+ * - Average n^2
+ * - Worst n^2
  *
  */
 public final class InsertionSort extends ExecutableSort{

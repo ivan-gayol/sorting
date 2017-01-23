@@ -5,6 +5,14 @@ package baldur.sorting.example.algs;
 
 /**
  * @author igayolfernan
+ * 
+ * Implements quicksort algorithm:
+ * 
+ * - Not stable
+ * - Memory O(log n)
+ * - Best O(n Log n)
+ * - Average O(n Log n)
+ * - Worst n^2
  *
  */
 public class QuickSort extends ExecutableSort {
