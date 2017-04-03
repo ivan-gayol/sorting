@@ -7,6 +7,7 @@ import baldur.sorting.example.algs.ExecutableSort;
 import baldur.sorting.example.algs.InsertionSort;
 import baldur.sorting.example.algs.MergeSort;
 import baldur.sorting.example.algs.QuickSort;
+import baldur.sorting.example.algs.SelectionSort;
 import baldur.sorting.example.helper.GenerateRandomArrayHelper;
 import baldur.sorting.example.helper.PrintHelper;
 
@@ -23,6 +24,7 @@ public class SortingTest {
 		InsertionSort insertionSort = new InsertionSort();
 		QuickSort quickSort = new QuickSort();
 		MergeSort mergeSort = new MergeSort();
+		SelectionSort selectionSort = new SelectionSort();
 		
 		
 		for (int i = 99980; i < 100000; i++) {
@@ -31,10 +33,12 @@ public class SortingTest {
 			insertionSort.setArr(generatedArray);
 			quickSort.setArr(generatedArray);
 			mergeSort.setArr(generatedArray);
+			selectionSort.setArr(generatedArray);
 			List<ExecutableSort> algList = new LinkedList<>();
 			//algList.add(insertionSort);
 			algList.add(quickSort);
 			algList.add(mergeSort);
+			algList.add(selectionSort);
 			PrintHelper.PrintLenghtTimeMessage(algList);		
 			
 		}		

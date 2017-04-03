@@ -6,10 +6,15 @@ package baldur.sorting.example.algs;
 /**
  * @author igayolfernan
  * 
+ * From Wikipedia
+ * On typical modern architectures, efficient quicksort implementations generally outperform mergesort for sorting RAM-based arrays.
+ * On the other hand, merge sort is a stable sort and is more efficient at handling slow-to-access sequential media. 
+ * Merge sort is often the best choice for sorting a linked list
+ * 
  * Implements mergeSort algorithm:
  * 
  * - Stable
- * - Memory O(log n)
+ * - Memory n A hybrid block merge sort is O(1) mem.
  * - Best O(n Log n)
  * - Average O(n Log n)
  */
